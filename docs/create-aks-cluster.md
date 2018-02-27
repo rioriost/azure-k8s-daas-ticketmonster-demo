@@ -11,6 +11,12 @@ Enable AKS preview for your Azure subscription by running the following command 
 az provider register -n Microsoft.ContainerService
 ```
 
+If it's the fisrt time to deploy VM with the subscription you're using, you should execute the following commands:
+```
+az provider register -n Microsoft.Network
+az provider register -n Microsoft.Compute
+```
+
 Create resource group (Resource group named RG-aks in eastus region):
 ```
 az group create --name RG-aks --location eastus
